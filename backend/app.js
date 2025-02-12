@@ -48,11 +48,20 @@ app.use(session({
 
 require("./rutas.js")
 
-mongoose.connect("mongodb://127.0.0.1:27017/"+config.bd).then((respuesta)=>{
-    console.log("Conexion a mongo correcta")
-}).catch((error)=>{
+
+mongoose.connect("mongodb://" + config.bdUser + ":" + config.bdPass + '@' + config.bdIp + ":" + config.bdPort +  "/" + config.bd).then((respuesta)=>{
+    console.log("Conexion correcta a mongo")
+}).catch((error) => {
     console.log(error)
 })
+
+
+
+// mongoose.connect("mongodb://127.0.0.1:27017/"+config.bd).then((respuesta)=>{
+//     console.log("Conexion a mongo correcta")
+// }).catch((error)=>{
+//     console.log(error)
+// })
 
 app.use(cors({
     origin: function(origin, callback){

@@ -6,6 +6,12 @@ config.urlReal = "http://localhost:4200"
 
 config.puerto = 3000
 config.bd = "PruebaNode"
+config.bdUser = ""
+config.bdPass = ""
+config.bdIp = "127.0.0.1"
+config.bdPort = "27017"
+
+
 config.secret="dsfasfsdwr43554353&%#$/&"
 
 config.email.host = "smtp.gmail.com"
